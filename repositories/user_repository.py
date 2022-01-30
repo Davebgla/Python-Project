@@ -34,18 +34,18 @@ def select(id):
     return user
 
 
-# def delete_all():
-#     sql = "DELETE FROM users"
-#     run_sql(sql)
+def delete_all():
+    sql = "DELETE FROM users"
+    run_sql(sql)
 
 
-# def delete(id):
-#     sql = "DELETE  FROM users WHERE id = %s"
-#     values = [id]
-#     run_sql(sql, values)
+def delete(id):
+    sql = "DELETE  FROM users WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)
 
 
-# def update(user):
-#     sql = "UPDATE users SET (name) = (%s) WHERE id = %s"
-#     values = [user.name, user.id]
-#     run_sql(sql, values)
+def update(user):
+    sql = "UPDATE users SET (name) = (%s) WHERE id = %s"
+    values = [user.name, user.id]
+    run_sql(sql, values)

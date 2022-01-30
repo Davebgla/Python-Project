@@ -47,18 +47,18 @@ def select(id):
     return holiday
 
 
-# def delete_all():
-#     sql = "DELETE FROM holidays"
-#     run_sql(sql)
+def delete_all():
+    sql = "DELETE FROM holidays"
+    run_sql(sql)
 
 
-# def delete(id):
-#     sql = "DELETE FROM holidays WHERE id = %s"
-#     values = [id]
-#     run_sql(sql, values)
+def delete(id):
+    sql = "DELETE FROM holidays WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)
 
 
-# def update(holiday):
-#     sql = "UPDATE holidays SET (type, country_id, city_id, review, user_id) = (%s, %s, %s, %s, %s) WHERE id = %s"
-#     values = [holiday.type, holiday.country.id, holiday.city.id, holiday.review, holiday.user.id, holiday.id]
-#     run_sql(sql, values)
+def update(holiday):
+    sql = "UPDATE holidays SET (type, country_id, city_id, review, user_id) = (%s, %s, %s, %s, %s) WHERE id = %s"
+    values = [holiday.type, holiday.country.id, holiday.city.id, holiday.review, holiday.user.id, holiday.id]
+    run_sql(sql, values)
