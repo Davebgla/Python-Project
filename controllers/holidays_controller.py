@@ -48,7 +48,7 @@ def show_holidays(id):
     return render_template('holidays/show.html', holiday = holiday)
 
 # EDIT
-# GET '/tasks/<id>/edit'
+# GET '/holidays/<id>/edit'
 @holidays_blueprint.route('/holidays/<id>/edit', methods=['GET'])
 def edit_holiday(id):
     holiday = holiday_repository.select(id)

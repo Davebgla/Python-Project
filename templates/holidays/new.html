@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <form action="/holidays" method="post">
+        <div>
+        <label for="description">Type:</label>
+        <input type="text" id="type" name="type" placeholder="type" required autofocus>
+        </div>
+        <div>
+        <label for="country">Country:</label>
+        <input type="text" id="country" name="country" placeholder="country">
+        </div>
+        <div>
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" placeholder="city">
+        </div>
+        <div>
+            <label for="review">Review:</label>
+            <input type="text" id="review" name="review" placeholder="review">
+        </div>
+        <div>
+            <form action="/holidays" method="post">
+                <label for="user">Select user:</label>
+                  <select name="user_id" id="user">
+                    {% for user in users %}
+                    <option value="{{ user.id }}">{{ user.name }}</option>
+                    {% endfor %}
+                  </select>
+        </div>
+
+        <button type="submit">Add Holiday</button>
+
+
+    </form>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% block content %}
+<link rel="stylesheet" href="{{url_for('static', filename='style.css') }}">
+{% for holiday in all_holidays %}
+<div class="holiday">
+    <div class="content">
+      {{holiday.user.name}} 
+      <div class="type">
+        <a href="holidays/{{holiday.id}}">{{ holiday.type }}</a>
+      </div>
+      <div class="country">
+          {{ holiday.country.name }}
+      </div>
+      <div class="city">
+          {{ holiday.city.name }}
+      </div>
+      <div class="review">
+          <a href="holidays/{{holiday.id}}">{{ holiday.review }}</a>
+      </div>
+
+      <div class="buttons">
+        <form action="/holidays/{{ holiday.id }}/delete" method="POST">
+            <input class="btn btn--danger" type="submit" value="delete" />
+          </form>
+    
+      </div>
+    </div>
+  </div>
+{% endfor %}  
+
+
+{% endblock %}
