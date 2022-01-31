@@ -1,43 +1,37 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <form action="/holidays" method="post">
+    <form action="/holidays/{{holiday.id}}" method="post">
         <div>
         <label for="description">Type:</label>
-        <input type="text" id="holiday_type" name="holiday_type" placeholder="holiday_type" required autofocus>
+        <input type="text" id="holiday_type" name="holiday_type" value="{{holiday_type}}" required autofocus>
         </div>
         <div>
                 <label for="country">Select country:</label>
                   <select name="country_id" id="country">
-                    {% for country in countries %}
                     <option value="{{ country.id }}">{{ country.name }}</option>
-                    {% endfor %}
                   </select>
         </div>
         <div>
 
                 <label for="city">Select city:</label>
                   <select name="city_id" id="city">
-                    {% for city in cities %}
                     <option value="{{ city.id }}">{{ city.name }}</option>
-                    {% endfor %}
                   </select>
         </div>
         <div>
             <label for="review">Review:</label>
-            <input type="text" id="review" name="review" placeholder="review">
+            <input type="text" id="review" name="review" value="{{review}}">
         </div>
         <div>
 
                 <label for="user">Select user:</label>
                   <select name="user_id" id="user">
-                    {% for user in users %}
                     <option value="{{ user.id }}">{{ user.name }}</option>
-                    {% endfor %}
                   </select>
         </div>
 
-        <button type="submit">Add Holiday</button>
+        <button type="submit">Update</button>
 
 
     </form>

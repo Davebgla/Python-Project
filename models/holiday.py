@@ -1,7 +1,7 @@
 class Holiday:
 
-    def __init__(self, type, country, city, review, user, id = None):
-        self.type = type
+    def __init__(self, holiday_type, country, city, review, user, id = None):
+        self.holiday_type = holiday_type
         self.country = country
         self.city = city
         self.review = review

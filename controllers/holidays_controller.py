@@ -15,9 +15,16 @@ def holidays():
     holidays = holiday_repository.select_all()
     return render_template('holidays/index.html', all_holidays = holidays)
 
+# SHOW
+# GET '/holidays/id'
+@holidays_blueprint.route('/holidays/<id>', methods=['GET'])
+def show_holidays(id):
+    holiday = holiday_repository.select(id)
+    return render_template('holidays/show.html', holiday = holiday)
+
 # NEW
 # GET '/holidays/new'
-@holidays_blueprint.route('/holidays/new', methods=['GET'])
+@holidays_blueprint.route('/holidays/new')
 def new_holiday():
     cities = city_repository.select_all()
     countries = country_repository.select_all()
@@ -28,7 +35,7 @@ def new_holiday():
 # POST '/holidays'
 @holidays_blueprint.route('/holidays', methods=['POST'])
 def create_holiday():
-    type = request.form['type']
+    holiday_type = request.form["holiday_type"]
     country_id = request.form['country_id']
     city_id = request.form['city_id']
     review = request.form['review']
@@ -36,16 +43,10 @@ def create_holiday():
     country = country_repository.select(country_id)
     city = city_repository.select(city_id)
     user = user_repository.select(user_id)
-    holiday = Holiday(type, country, city, review, user)
+    holiday = Holiday(holiday_type, country, city, review, user)
     holiday_repository.save(holiday)
     return redirect('/holidays')
 
-# SHOW
-# GET '/holidays/id'
-@holidays_blueprint.route('/holidays/<id>', methods=['GET'])
-def show_holidays(id):
-    holiday = holiday_repository.select(id)
-    return render_template('holidays/show.html', holiday = holiday)
 
 # EDIT
 # GET '/holidays/<id>/edit'
@@ -61,7 +62,7 @@ def edit_holiday(id):
 # PUT '/holidays/<id>'
 @holidays_blueprint.route('/holidays/<id>', methods=['POST'])
 def update_holiday(id):
-    type = request.form['type']
+    holiday_type = request.form['holiday_type']
     country_id = request.form['country_id']
     city_id = request.form['city_id']
     review = request.form['review']
@@ -69,7 +70,7 @@ def update_holiday(id):
     country = country_repository.select(country_id)
     city = city_repository.select(city_id)
     user = user_repository.select(user_id)
-    holiday = Holiday(type, country, city, review, user, id)
+    holiday = Holiday(holiday_type, country, city, review, user, id)
     holiday_repository.update(holiday)
     return redirect('/holidays')
 

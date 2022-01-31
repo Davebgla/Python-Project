@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+
+  <div>
+    <p>{{holiday.name}}</p>
+    <p>{{holiday.holiday_type}}</p>
+    <p>{{holiday.country}}</p>
+    <p>{{holiday.city}}</p>
+    <p>{{holiday.review}}</p>
+    <p><a href="/holidays/{{holiday.id}}/edit">Edit</a></p>
+  </div>
+
+{% endblock %}

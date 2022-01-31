@@ -22,7 +22,7 @@ CREATE TABLE cities (
 
 CREATE TABLE holidays (
     id SERIAL PRIMARY KEY,
-    type VARCHAR(255),
+    holiday_type VARCHAR(255),
     country_id INT REFERENCES countries(id),
     city_id INT REFERENCES cities(id),
     review TEXT,

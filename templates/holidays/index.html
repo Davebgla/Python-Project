@@ -4,8 +4,8 @@
 <div class="holiday">
     <div class="content">
       {{holiday.user.name}} 
-      <div class="type">
-        <a href="holidays/{{holiday.id}}">{{ holiday.type }}</a>
+      <div class="holiday_type">
+        <a href="holidays/{{holiday.id}}">{{ holiday.holiday_type }}</a>
       </div>
       <div class="country">
           {{ holiday.country.name }}
@@ -19,9 +19,8 @@
 
       <div class="buttons">
         <form action="/holidays/{{ holiday.id }}/delete" method="POST">
-            <input class="btn btn--danger" type="submit" value="delete" />
+            <button class="" holiday_type="submit" value="delete">Delete</button>
           </form>
-    
       </div>
     </div>
   </div>
