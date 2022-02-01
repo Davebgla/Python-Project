@@ -1,11 +1,12 @@
 {% extends "base.html" %}
 
 {% block content %}
+
+   
     <form action="/holidays" method="post">
         <div>
         <label for="description">Type:</label>
         <input type="text" id="holiday_type" name="holiday_type" placeholder="holiday_type" required autofocus>
-        </div>
         <div>
                 <label for="country">Select country:</label>
                   <select name="country_id" id="country">
@@ -25,7 +26,7 @@
         </div>
         <div>
             <label for="review">Review:</label>
-            <input type="text" id="review" name="review" placeholder="review">
+            <textarea name="review" id="review" cols="20" rows="10"></textarea>
         </div>
         <div>
 
@@ -41,4 +42,5 @@
 
 
     </form>
+    </div>
 {% endblock %}
