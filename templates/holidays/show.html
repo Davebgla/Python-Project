@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 {% block content %}
-
+  <div class="hols_edit_container">
   <div class="hols_edit">
     <p>{{holiday.user.name}}</p>
     <p>{{holiday.holiday_type}}</p>
@@ -9,6 +9,7 @@
     <p>{{holiday.city.name}}</p>
     <p>{{holiday.review}}</p>
     <p><a href="/holidays/{{holiday.id}}/edit">Edit</a></p>
+  </div>
   </div>
 
 {% endblock %}

@@ -17,4 +17,4 @@ def create_country():
     name = request.form['name']
     country = Country(name)
     country_repository.save(country)
-    return redirect('/holidays')
+    return redirect('/cities/new')

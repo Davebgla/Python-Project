@@ -22,4 +22,4 @@ def create_city():
     country = country_repository.select(country_id)
     city = City(name, country)
     city_repository.save(city)
-    return redirect('/holidays')
+    return redirect('/holidays/new')
