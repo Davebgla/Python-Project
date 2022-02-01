@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
+<link rel="stylesheet" href="{{url_for('static', filename='style.css') }}">
     <form action="/holidays/{{holiday.id}}" method="post">
         <div>
         <label for="description">Type:</label>
