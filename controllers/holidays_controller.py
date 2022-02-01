@@ -1,6 +1,7 @@
 from flask import Flask, redirect, render_template, request
 from flask import Blueprint
 from models.holiday import Holiday
+from models.user import User
 import repositories.holiday_repository as holiday_repository
 import repositories.city_repository as city_repository
 import repositories.country_repository as country_repository
