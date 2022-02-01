@@ -1,13 +1,13 @@
 {% extends "base.html" %}
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 {% block content %}
 
-  <div>
-    <p>{{holiday.name}}</p>
+  <div class="hols_edit">
+    <p>{{holiday.user.name}}</p>
     <p>{{holiday.holiday_type}}</p>
     <p>{{holiday.country.name}}</p>
     <p>{{holiday.city.name}}</p>
     <p>{{holiday.review}}</p>
-    <p>{{holiday.user.name}}</p>
     <p><a href="/holidays/{{holiday.id}}/edit">Edit</a></p>
   </div>
 

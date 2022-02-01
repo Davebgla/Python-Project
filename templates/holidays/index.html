@@ -3,7 +3,8 @@
 {% block content %}
 <link rel="stylesheet" href="{{url_for('static', filename='style.css') }}">
 {% for holiday in all_holidays %}
-<div class="holiday">
+<div class="hols_container">
+  <div class="hols">
     <div class="content">
       {{holiday.user.name}} 
       <div class="holiday_type">
@@ -26,6 +27,8 @@
       </div>
     </div>
   </div>
+
+</div>
 {% endfor %}  
 
 

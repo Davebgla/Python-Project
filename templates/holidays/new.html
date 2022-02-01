@@ -2,11 +2,11 @@
 
 {% block content %}
 
-   
+   <div class form_container>
     <form action="/holidays" method="post">
         <div>
         <label for="description">Type:</label>
-        <input type="text" id="holiday_type" name="holiday_type" placeholder="holiday_type" required autofocus>
+        <input type="text" id="holiday_type" name="holiday_type" placeholder="type" required autofocus>
         <div>
                 <label for="country">Select country:</label>
                   <select name="country_id" id="country">
@@ -26,7 +26,7 @@
         </div>
         <div>
             <label for="review">Review:</label>
-            <textarea name="review" id="review" cols="20" rows="10"></textarea>
+            <input type="text" id="review" name="review" placeholder="review">
         </div>
         <div>
 
@@ -38,9 +38,10 @@
                   </select>
         </div>
 
-        <button type="submit">Add Holiday</button>
+        <button class="buttons" type="submit">Add Holiday</button>
 
 
     </form>
+   </div>
     </div>
 {% endblock %}
