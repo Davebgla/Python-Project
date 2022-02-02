@@ -25,6 +25,8 @@ CREATE TABLE holidays (
     holiday_type VARCHAR(255),
     country_id INT REFERENCES countries(id),
     city_id INT REFERENCES cities(id),
+    transport TEXT,
+    currency VARCHAR(255),
     review TEXT,
     user_id INT REFERENCES users(id)
 );

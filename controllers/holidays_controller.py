@@ -39,12 +39,14 @@ def create_holiday():
     holiday_type = request.form["holiday_type"]
     country_id = request.form['country_id']
     city_id = request.form['city_id']
+    transport = request.form['transport']
+    currency = request.form['currency']
     review = request.form['review']
     user_id = request.form['user_id']
     country = country_repository.select(country_id)
     city = city_repository.select(city_id)
     user = user_repository.select(user_id)
-    holiday = Holiday(holiday_type, country, city, review, user)
+    holiday = Holiday(holiday_type, country, city, transport, currency, review, user)
     holiday_repository.save(holiday)
     return redirect('/holidays')
 
@@ -66,12 +68,14 @@ def update_holiday(id):
     holiday_type = request.form['holiday_type']
     country_id = request.form['country_id']
     city_id = request.form['city_id']
+    transport = request.form['transport']
+    currency = request.form['currency']
     review = request.form['review']
     user_id = request.form['user_id']
     country = country_repository.select(country_id)
     city = city_repository.select(city_id)
     user = user_repository.select(user_id)
-    holiday = Holiday(holiday_type, country, city, review, user, id)
+    holiday = Holiday(holiday_type, country, city, transport, currency, review, user, id)
     holiday_repository.update(holiday)
     return redirect('/holidays')
 

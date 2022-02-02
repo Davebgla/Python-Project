@@ -10,8 +10,8 @@ import repositories.user_repository as user_repository
 
 
 def save(holiday):
-    sql = "INSERT INTO holidays (holiday_type, country_id, city_id, review, user_id) VALUES (%s, %s, %s, %s, %s) RETURNING *"
-    values = [holiday.holiday_type, holiday.country.id, holiday.city.id, holiday.review, holiday.user.id]
+    sql = "INSERT INTO holidays (holiday_type, country_id, city_id, transport, currency, review, user_id) VALUES (%s, %s, %s, %s, %s, %s, %s) RETURNING *"
+    values = [holiday.holiday_type, holiday.country.id, holiday.city.id, holiday.transport, holiday.currency, holiday.review, holiday.user.id]
     results = run_sql(sql, values)
     id = results[0]['id']
     holiday.id = id
@@ -28,7 +28,7 @@ def select_all():
         country = country_repository.select(row['country_id'])
         city = city_repository.select(row['city_id'])
         user = user_repository.select(row['user_id'])
-        holiday = Holiday(row['holiday_type'], country, city, row['review'], user, row['id'])
+        holiday = Holiday(row['holiday_type'], country, city, row['transport'], row['currency'], row['review'], user, row['id'])
         holidays.append(holiday)
     return holidays
 
@@ -43,7 +43,7 @@ def select(id):
         country = country_repository.select(result['country_id'])
         city = city_repository.select(result['city_id'])
         user = user_repository.select(result['user_id'])
-        holiday = Holiday(result['holiday_type'], country, city, result['review'], user, result['id'])
+        holiday = Holiday(result['holiday_type'], country, city, result['transport'], result['currency'], result['review'], user, result['id'])
     return holiday
 
 
@@ -59,6 +59,6 @@ def delete(id):
 
 
 def update(holiday):
-    sql = "UPDATE holidays SET (holiday_type, country_id, city_id, review, user_id) = (%s, %s, %s, %s, %s) WHERE id = %s"
-    values = [holiday.holiday_type, holiday.country.id, holiday.city.id, holiday.review, holiday.user.id, holiday.id]
+    sql = "UPDATE holidays SET (holiday_type, country_id, city_id, transport, currency, review, user_id) = (%s, %s, %s, %s, %s, %s, %s) WHERE id = %s"
+    values = [holiday.holiday_type, holiday.country.id, holiday.city.id, holiday.transport, holiday.currency, holiday.review, holiday.user.id, holiday.id]
     run_sql(sql, values)

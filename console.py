@@ -43,13 +43,13 @@ city_repository.save(city4)
 
 
 # HOLIDAYS CREATED
-holiday1 = Holiday("Summer Holiday", country1, city1, "Very hot! Amazing food! Hotel was 5 star. Would go back!", user1)
+holiday1 = Holiday("Summer Holiday", country1, city1, "Plane", "Euro", "Very hot! Amazing food! Hotel was 5 star. Would go back!", user1)
 holiday_repository.save(holiday1)
-holiday2 = Holiday("Spring 2022 Holiday", country2, city2, "Can't wait to go back! NYC is my favourite city!", user2)
+holiday2 = Holiday("Spring 2022 Holiday", country2, city2, "Plane", "USD", "" "Can't wait to go back! NYC is my favourite city!", user2)
 holiday_repository.save(holiday2)
-holiday3 = Holiday("Long Weekend", country3, city3, "Possibly the best city in Europe! So much to do! Especially enjoyed the drinking!", user3)
+holiday3 = Holiday("Long Weekend", country3, city3, "Plane", "Euro", "Possibly the best city in Europe! So much to do! Especially enjoyed the drinking!", user3)
 holiday_repository.save(holiday3)
-holiday4 = Holiday("Winter 2022", country4, city4, "Still not been. Looking forward to it but I've heard it's cold", user4)
+holiday4 = Holiday("Winter 2022", country4, city4, "Plane", "Krone", "Still not been. Looking forward to it but I've heard it's cold", user4)
 holiday_repository.save(holiday4)
 
 
