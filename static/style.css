@@ -1,6 +1,7 @@
-/* body{
-    background-image: linear-gradient(to right, #fff1eb, #ace0f9);
-} */
+
+body{
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='1000' preserveAspectRatio='none' viewBox='0 0 1440 1000'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1011%26quot%3b)' fill='none'%3e%3cpath d='M 0%2c159 C 57.6%2c201 172.8%2c357.8 288%2c369 C 403.2%2c380.2 460.8%2c204.2 576%2c215 C 691.2%2c225.8 748.8%2c436.8 864%2c423 C 979.2%2c409.2 1036.8%2c172.6 1152%2c146C 1267.2%2c119.4 1382.4%2c261.2 1440%2c290L1440 1000L0 1000z' fill='rgba(210%2c 206%2c 101%2c 1)'%3e%3c/path%3e%3cpath d='M 0%2c972 C 96%2c893 288%2c581.4 480%2c577 C 672%2c572.6 768%2c959.6 960%2c950 C 1152%2c940.4 1344%2c613.2 1440%2c529L1440 1000L0 1000z' fill='rgba(234%2c 245%2c 168%2c 1)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1011'%3e%3crect width='1440' height='1000' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+}
 
 .nav{
     display: flex;
@@ -21,7 +22,7 @@
     padding-left: 20px;
     list-style: none;
     color: white;
-    font-family: "Helvetica", arial, sans-serif; font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif; font-size: 16px;
     width: 100%;
     text-align: center;
    }
@@ -29,13 +30,13 @@
   .hols{
     display: flex;
     font-family: Arial, Helvetica, sans-serif;
-    border: 5px solid white;
     width: 30%;
     min-height: 68px;
     padding: 10px;
     line-height: 18px;
     margin-bottom: 10px;
-    background-color: rgb(167, 164, 164);
+    background-color: rgb(219, 216, 216);
+    
   }
 
   .hols_container{
@@ -45,7 +46,7 @@
   }
   
   .hometext h2{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Abril Fatface', cursive;
     text-decoration: none;
     font-size: 60px;
   }
@@ -56,4 +57,74 @@
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+  }
+
+  .form_container, input, select, button {
+    font-size: 100%;
+    width : 100%;
+    padding: 10px;
+    margin: 10px;
+    box-sizing: border-box;
+  }
+
+  .form_container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    margin: 0 auto;
+    height: 200px;
+  } 
+
+  .city_form, input, select, button {
+    font-size: 100%;
+    width : 100%;
+    padding: 10px;
+    margin: 10px;
+    box-sizing: border-box;
+  }
+
+  .city_form{
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    margin: 0 auto;
+  } 
+
+  .country_form, input, select, button {
+    font-size: 100%;
+    width : 100%;
+    padding: 10px;
+    margin: 10px;
+    box-sizing: border-box;
+  }
+
+  .country_form{
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    margin: 0 auto;
+  } 
+
+  .edit_form, input, select, button {
+    font-size: 100%;
+    width : 100%;
+    padding: 10px;
+    margin: 10px;
+    box-sizing: border-box;
+  }
+
+  .edit_form{
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    margin: 0 auto;
+  } 
+
+  .plan_button{
+    
+    width: 200px;
+  }
+
+  .hols_button{
+    width: 150px;
   }

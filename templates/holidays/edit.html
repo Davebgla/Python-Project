@@ -2,6 +2,7 @@
 
 {% block content %}
 <link rel="stylesheet" href="{{url_for('static', filename='style.css') }}">
+    <div class="edit_form">
     <form action="/holidays/{{holiday.id}}" method="post">
         <div>
         <label for="description">Type:</label>
@@ -42,4 +43,5 @@
 
 
     </form>
+    </div>
 {% endblock %}
