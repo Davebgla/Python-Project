@@ -5,10 +5,10 @@
    <div class="form_container">
     <form action="/holidays" method="post">
         <div>
-        <label for="description">Type:</label>
-        <input type="text" id="holiday_type" name="holiday_type" placeholder="type" required autofocus>
+        <label for="description">Holiday Type:</label>
+        <input type="text" id="holiday_type" name="holiday_type" placeholder="Holiday Type e.g. Honeymoon" required autofocus>
         <div>
-                <label for="country">Select country:</label>
+                <label for="country">Select Country:</label>
                   <select name="country_id" id="country">
                     {% for country in countries %}
                     <option value="{{ country.id }}">{{ country.name }}</option>
@@ -16,8 +16,7 @@
                   </select>
         </div>
         <div>
-
-                <label for="city">Select city:</label>
+                <label for="city">Select City:</label>
                   <select name="city_id" id="city">
                     {% for city in cities %}
                     <option value="{{ city.id }}">{{ city.name }}</option>
@@ -25,16 +24,16 @@
                   </select>
         </div>
         <div>
-          <label for="transport">Transport:</label>
-          <input type="text" id="transport" name="transport" placeholder="transport">
+          <label for="transport">How will you get there?:</label>
+          <input type="text" id="transport" name="transport" placeholder="e.g. Train">
       </div>
       <div>
         <label for="currency">Local currency:</label>
-        <input type="text" id="currency" name="currency" placeholder="currency">
+        <input type="text" id="currency" name="currency" placeholder="e.g. US Dollar">
     </div>
         <div>
-            <label for="review">Review:</label>
-            <input type="text" id="review" name="review" placeholder="review">
+            <label for="review">Leave a review:</label>
+            <input type="text" id="review" name="review" placeholder="e.g. Best holiday ever!">
         </div>
         <div>
 

@@ -1,17 +1,23 @@
 {% extends "base.html" %}
 
 {% block content %}
-
-<br>
-<br>
+<div class="container_home">
 <br>
 <div class="hometext">
     <h2>Holiday Planner</h2>
-    <h3>Plan your trip now</h3>
-    <p>Add countries, cities and more. Don't forget to review to your trip.</p>
-</div>
+    <h3>Welcome to your Holiday Planner</h3>
+    <h4>Let's get started:</h4>
+    <p>Step 1: Add a Country</p>
+    <p>Step 2: Add the City</p>
+    <p>Step 3: Add more details to your Holiday Planner </p>
 
+</div>
+<div class="container_home"></div>
 <div class="plan_button">
-<a href="/countries/new"><button type="plan">plan now</button></a>
+<a href="/countries/new"><button type="plan">Get Started</button></a>
+</div>
+<div>
+    <img class="image2" src="static/images/home2.jpg" width="66%" alt="travel">
+</div>
 </div>
 {% endblock %}
