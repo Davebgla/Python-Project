@@ -6,7 +6,7 @@
     <form action="/holidays/{{holiday.id}}" method="post">
         <div>
         <label for="description">Type:</label>
-        <input type="text" id="holiday_type" name="holiday_type" value="{{holiday_type}}" required autofocus>
+        <input type="text" id="holiday_type" name="holiday_type" value="{{holiday.holiday_type}}" required autofocus>
         </div>
         <div>
                 <label for="country">Select country:</label>
@@ -27,15 +27,15 @@
         </div>
         <div>
           <label for="transport">Transport:</label>
-          <input type="text" id="transport" name="transport" placeholder="transport">
+          <input type="text" id="transport" name="transport" value="{{holiday.transport}}">
       </div>
       <div>
       <label for="currency">Local currency:</label>
-      <input type="text" id="currency" name="currency" placeholder="currency">
+      <input type="text" id="currency" name="currency" value="{{holiday.currency}}">
         </div>
         <div>
             <label for="review">Review:</label>
-            <input type="text" id="review" name="review" value="{{review}}">
+            <input type="text" id="review" name="review" value="{{holiday.review}}">
         </div>
         <div>
 

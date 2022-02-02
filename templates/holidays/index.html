@@ -8,7 +8,7 @@
     <div class="content">
       {{holiday.user.name}} 
       <div class="holiday_type">
-        <a href="holidays/{{holiday.id}}">{{ holiday.holiday_type }}</a>
+      {{ holiday.holiday_type }}
       </div>
       <div class="country">
           {{ holiday.country.name }}
@@ -17,23 +17,23 @@
           {{ holiday.city.name }}
       </div>
       <div class="transport">
-        <a href="holidays/{{holiday.id}}">{{ holiday.transport }}</a>
+        {{ holiday.transport }}
       </div>
       <div class="currency">
-        <a href="holidays/{{holiday.id}}">{{ holiday.currency }}</a>
+        {{ holiday.currency }}
       </div>
       <div class="review">
-          <a href="holidays/{{holiday.id}}">{{ holiday.review }}</a>
+        {{ holiday.review }}
       </div>
 
       <div class="hols_button">
         <form action="/holidays/{{ holiday.id }}/delete" method="POST">
             <button holiday_type="submit" value="delete">Delete</button>
           </form>
+          <a href="/holidays/{{holiday.id}}/edit"><button type="Edit">Edit</button></a>
       </div>
     </div>
   </div>
-
 </div>
 {% endfor %}  
 
